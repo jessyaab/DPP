@@ -1,0 +1,1653 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/segoeui.eot');
+  src: url('fonts/segoeui.eot?#iefix') format('embedded-opentype'),
+       url('fonts/segoeui.woff') format('woff'),
+       url('fonts/segoeui.svg#SegoeUI') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Segoe UI";
+  margin: 0;
+  padding: 0;
+  background-color: rgba(244, 210, 181);
+}
+ html{
+   overflow-x: hidden;
+ }
+
+
+/*------------------------------------------------------------------
+   	Configuração da Nav
+-------------------------------------------------------------------*/
+
+.menu {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    background-color:rgba(142, 134, 134, 0.5);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 5;
+}
+#menu-center {
+    width: 980px;
+    height: 75px;
+    margin: 0 auto;
+}
+#menu-center ul {
+   position: absolute;
+    left: 20%;
+}
+#menu-center ul li a{
+		padding: 15px 80px;
+}
+#menu-center ul li {
+    list-style: none;
+    display: inline;
+
+}
+.active, #menu-center ul li a:hover  {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 70px;
+	  background-color:rgba(243, 117, 91);
+
+}
+a {
+    font-size: 20px;
+    color: rgba(77, 76, 76);
+    text-decoration: none;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+
+/*------------------------------------------------------------------
+   	Configuração Scroll Indicator
+-------------------------------------------------------------------*/
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  z-index: 10;
+  position: fixed;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #f3755b;
+  width: 0%;
+  position: fixed;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Home
+-------------------------------------------------------------------*/
+
+#home{
+  width: 100%;
+  height: 500px;
+}
+
+.home_dpp div {
+  position: relative;
+  display: block;
+  float: left;
+  width: 20%;
+  height: 20vh;
+}
+
+.nav_home {
+  position: absolute;
+  left: 49%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-top: 680px;
+  z-index: 3;
+}
+
+.bar {
+  width: 30px;
+  height: 30px;
+  border-radius: 80%;
+  border: 2px solid rgba(77, 76, 76);
+  margin: 6px;
+  cursor: pointer;
+}
+
+.bar:hover{
+  background: #f3755b;
+}
+
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 200px;
+  display: flex;
+}
+
+.slide_home {
+  width: 15%;
+  transition: 0.6s;
+  margin-top: -200px;
+  z-index: 3;
+}
+
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+
+.dpp1 {
+  position: relative;
+  width: 40%;
+  height: 700px;
+  left: 45%;
+  margin-top: 350px;
+}
+
+.dpp2 {
+  position: relative;
+  width: 40%;
+  height: 700px;
+  left: 80%;
+  margin-top: 350px;
+}
+
+
+/*------------------------------------------------------------------
+   	Configuração barra-informações
+-------------------------------------------------------------------*/
+
+/*
+.background-top{
+  background-color: black;
+  width: 100%;
+  height: 110px;
+  z-index: -1;
+  position: absolute;
+  margin-top: 968px;
+}
+*/
+
+.sec2 {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(244, 210, 181);
+  margin-top: -300px;
+  z-index: 1;
+}
+
+/*------------------------------------------------------------------
+   	Configuração Sobre 
+-------------------------------------------------------------------*/
+
+#sobre_nos{
+  height: 800px;
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  margin-top: 100px;
+  z-index: 1;
+}
+
+.fundo_sobre_nos{
+  float: right;
+  width: 100%;
+  margin-top: -600px;
+}
+
+.titulo_1 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  left: 34%;
+  font-size: 5em;
+  margin-top: 950px;
+  z-index: 3;
+}
+
+.titulo_2 {
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 34.2%;
+  font-size: 5em;
+  margin-top: 950px;
+  z-index: 3;
+}
+
+#texto_sobre {
+  position: absolute;
+  font-family: "Segoe UI";
+  font-size: 22px;
+  text-align: center;
+  font-weight: normal;
+  color: rgba(77, 76, 76);
+  margin-left: 400px;
+  padding-right: 100px;
+  margin-top: 500px;
+  z-index: 3;
+  right: 15%;
+}
+
+/* Fim da configuração -Sobre Nós- */
+
+/*------------------------------------------------------------------
+   	Configuração 2° texto sobre dpp
+-------------------------------------------------------------------*/
+
+.sobre_dpp1 {
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 60%;
+  font-size: 6em;
+  margin-top: 800px;
+  z-index: 3;
+}
+
+.sobre_dpp2 {
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 70%;
+  font-size: 4em;
+  margin-top: 870px;
+  z-index: 3;
+}
+
+.sobre_dpp3 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  left: 60%;
+  font-size: 6em;
+  margin-top: 890px;
+  z-index: 3;
+}
+
+.sobre_dpp4 {
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 60.2%;
+  font-size: 6em;
+  margin-top: 890px;
+  z-index: 3;
+}
+
+/* Texto sobre dpp */
+
+.texto_sobredpp1 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: "Segoe UI";
+  font-weight: normal;
+  font-size: 25px;
+  left: 65%;
+  margin-top: 1050px;
+  z-index: 3;
+}
+
+.texto_sobredpp2 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: "Segoe UI";
+  font-weight: normal;
+  font-size: 20px;
+  left: 65%;
+  margin-top: 1100px;
+  z-index: 3;
+}
+
+.texto_sobredpp3 {
+  position: absolute;
+  left: 67%;
+  margin-top: 1150px;
+  z-index: 3;
+}
+
+
+.texto_sobredpp5 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: "Segoe UI";
+  font-weight: normal;
+  font-size: 20px;
+  left: 65%;
+  margin-top: 1330px;
+  z-index: 3;
+}
+
+/* Classificação Sobre */
+
+.classi_sobredpp {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  font-weight: normal;
+  left: 65%;
+  font-size: 50px;
+  margin-top: 1370px;
+  z-index: 3;
+}
+
+.classi_sobredpp2 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  font-weight: normal;
+  left: 65%;
+  font-size: 50px;
+  margin-top: 1415px;
+  z-index: 3;
+}
+
+.classi_sobredpp3 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  font-weight: normal;
+  left: 65%;
+  font-size: 50px;
+  margin-top: 1465px;
+  z-index: 3;
+}
+
+.classi_sobredpp4 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  font-weight: normal;
+  left: 65%;
+  font-size: 50px;
+  margin-top: 1515px;
+  z-index: 3;
+}
+
+.classi_sobredpp5 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  font-weight: normal;
+  left: 65%;
+  font-size: 50px;
+  margin-top: 1565px;
+  z-index: 3;
+}
+
+/* Imagem Sobre */
+
+.img_sobre {
+  position: absolute;
+  width: 55%;
+  margin-top: 980px;
+}
+
+/* Fim Imagem Sobre */
+
+/* Setas */
+
+.seta_sobredpp1 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1400px;
+  left: 62%;
+}
+
+.seta_sobredpp2 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1450px;
+  left: 62%;
+}
+
+.seta_sobredpp3 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1500px;
+  left: 62%;
+}
+
+.seta_sobredpp4 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1550px;
+  left: 62%;
+}
+
+.seta_sobredpp5 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1600px;
+  left: 62%;
+}
+
+/* Fim Setas*/
+
+/* Clique aqui - Sobre */
+
+#mais_texto_sobre {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: "Segoe UI";
+  font-weight: normal;
+  left: 62%;
+  font-size: 20px;
+  margin-top: 1650px;
+  z-index: 3;
+}
+
+.span1 {
+
+  color: #9400d3;
+}
+
+.mancha_sobre1 {
+
+
+  position: absolute;
+  width: 30%;
+  margin-top: -80px;
+  left: 60%;
+  z-index: -1;
+}
+
+/* Títulos - Modal */
+
+.box_dpp {
+  margin-left: 1480px;
+  font-size: 20px;
+  margin-top: 1625px;
+  z-index: 99;
+}
+
+.button_dpp {
+  font-size: 1em;
+  color: #9400d3;
+  text-decoration: none;
+  cursor: pointer;
+  left: 80%;
+  z-index: 99;
+}
+.button_dpp:hover {
+  z-index: 99;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99;
+}
+
+.popup_dpp {
+  margin: 70px auto;
+  padding: 20px;
+  background: rgba(244, 210, 181);
+  border-radius: 5px;
+  width: 60%;
+  height: 50%;
+  position: relative;
+  z-index: 99;
+}
+
+.popup_dpp h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: "Segoe UI";
+  z-index: 99;
+}
+.popup_dpp .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  z-index: 99;
+}
+.popup_dpp .close:hover {
+  color: #9400d3;
+  z-index: 99;
+}
+.popup_dpp .content {
+  max-height: 30%;
+  overflow: auto;
+  z-index: 99;
+}
+
+#dpp_sobre {
+
+  font-weight: bold;
+  text-align: center;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_popup {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+
+}
+
+.dpp_baby_blues {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(77, 76, 76);
+  
+}
+
+.baby_blues {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_psicose {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(77, 76, 76);
+
+}
+
+.psicose_puerperal {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_dados {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(77, 76, 76);
+}
+
+.dados_dpp {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_porisso {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(77, 76, 76);
+
+}
+
+.dpp_popup {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_popup2 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_popup3 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_popup4 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.popupdpp1 {
+
+  color: #f3755b;
+
+}
+
+/*------------------------------------------------------------------
+   	Configuração - Fatores
+-------------------------------------------------------------------*/
+
+/* Títulos - Sobre */
+
+#t_fatores1{
+
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 10%;
+  font-size: 6em;
+  margin-top: 100px;
+  z-index: 3;
+}
+
+.t_fatores2 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  left: 10%;
+  font-size: 6em;
+  margin-top: 190px;
+  z-index: 3;
+}
+
+.t_fatores3 {
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 9.8%;
+  font-size: 6em;
+  margin-top: 190px;
+  z-index: 3;
+}
+
+.t_fatores4 {
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 7%;
+  font-size: 6em;
+  margin-top: 530px;
+  z-index: 3;
+}
+
+/* Texto - Sobre */
+
+.texto_fatores1 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 1200px;
+  left: 9.8%;
+  margin-top: 350px;
+  z-index: 3;
+}
+
+#mais_info_fatores {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: "Segoe UI";
+  font-weight: normal;
+  left: 10%;
+  font-size: 20px;
+  margin-top: 700px;
+  z-index: 3;
+}
+
+.span2 {
+
+  color: #9400d3;
+}
+
+.box_fatores {
+  margin-left: 590px;
+  font-size: 20px;
+  margin-top: 675px;
+}
+
+.button_fatores {
+  font-size: 1em;
+  color: #9400d3;
+  text-decoration: none;
+  cursor: pointer;
+  left: 80%;
+  z-index: 99;
+}
+.button_fatores:hover {
+  z-index: 99;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99;
+}
+
+.popup_fatores {
+  margin: 70px auto;
+  padding: 20px;
+  background: rgba(244, 210, 181);
+  border-radius: 5px;
+  width: 60%;
+  height: 50%;
+  position: relative;
+  z-index: 99;
+}
+
+.popup_fatores h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: "Segoe UI";
+  z-index: 99;
+}
+.popup_fatores .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  z-index: 99;
+}
+.popup_fatores .close:hover {
+  color: #9400d3;
+  z-index: 99;
+}
+.popup_fatores .content {
+  max-height: 30%;
+  overflow: auto;
+  z-index: 99;
+}
+
+.dpp_fatores {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+
+}
+
+.dpp_fatores1 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_fatores2 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_fatores3 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+
+}
+
+.dpp_fatores4 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_fatores5{
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_fatores6 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(77, 76, 76);
+}
+
+
+.mancha_sobre1 {
+
+  position: absolute;
+  width: 30%;
+  margin-top: -80px;
+  left: 60%;
+  z-index: -1;
+}
+
+.mancha_fatores {
+
+  position: absolute;
+  width: 30%;
+  margin-top: 685px;
+  left: 8%;
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------
+   	Configuração - Sintomas
+-------------------------------------------------------------------*/
+
+/* Títulos - Sintoma */
+
+#t_sintomas1{
+
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 56%;
+  font-size: 6em;
+  margin-top: 200px;
+  z-index: 3;
+}
+
+/* Texto - Sintoma */
+
+
+.texto_sintomas {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 200px;
+  left: 56.8%;
+  margin-top: 400px;
+  z-index: 3;
+}
+
+.img_fatores {
+  position: absolute;
+  width: 25%;
+  margin-top: 100px;
+  left: 58%;
+}
+
+.img_sintomas {
+  position: absolute;
+  width: 30%;
+  margin-top: 100px;
+  left: 10%;
+}
+
+/* Mais info - Sintoma */
+
+.mais_info_sintomas {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: "Segoe UI";
+  font-weight: normal;
+  left: 61%;
+  font-size: 20px;
+  margin-top: 550px;
+  z-index: 3;
+}
+
+.span3 {
+
+  color: #9400d3;
+}
+
+.mancha_sintomas {
+
+  position: absolute;
+  width: 30%;
+  margin-top: 535px;
+  left: 58%;
+  z-index: -1;
+}
+
+.box_sintomas {
+  margin-left: 1470px;
+  font-size: 20px;
+  margin-top: 525px;
+}
+
+.button_sintomas {
+  font-size: 1em;
+  color: #9400d3;
+  text-decoration: none;
+  cursor: pointer;
+  left: 80%;
+  z-index: 99;
+}
+.button_sintomas:hover {
+  z-index: 99;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99;
+}
+
+.popup_sintomas {
+  margin: 70px auto;
+  padding: 20px;
+  background: rgba(244, 210, 181);
+  border-radius: 5px;
+  width: 60%;
+  height: 70%;
+  position: relative;
+  z-index: 99;
+}
+
+.popup_sintomas h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: "Segoe UI";
+  z-index: 99;
+}
+.popup_sintomas .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  z-index: 99;
+}
+.popup_sintomas .close:hover {
+  color: #9400d3;
+  z-index: 99;
+}
+.popup_sintomas .content {
+  max-height: 30%;
+  overflow: auto;
+  z-index: 99;
+}
+
+.dpp_sintomas {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas1 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas3 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas2 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas4 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas6 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas8 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas10 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas12 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas14 {
+
+  padding-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas5 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas7 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas9 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas11 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+
+.dpp_sintomas13 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+
+.dpp_sintomas15 {
+
+  padding-top: 10px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(77, 76, 76);
+}
+/*------------------------------------------------------------------
+   	Configuração - Ajuda
+-------------------------------------------------------------------*/
+
+/* Títulos - Ajuda */
+
+#t_ajuda1{
+
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 10%;
+  font-size: 6em;
+  margin-top: 300px;
+  z-index: 3;
+}
+
+.t_ajuda2{
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  left: 17.8%;
+  font-size: 6em;
+  margin-top: 400px;
+  z-index: 3;
+}
+
+.t_ajuda3{
+
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 18%;
+  font-size: 6em;
+  margin-top: 400px;
+  z-index: 3;
+}
+
+/* Texto - Ajuda */
+
+.texto_ajuda {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 1000px;
+  left: 10%;
+  margin-top: 600px;
+  z-index: 3;
+}
+
+/* Imagem - Ajuda */
+
+.img_ajuda {
+  position: absolute;
+  width: 25%;
+  margin-top: 200px;
+  left: 60%;
+}
+
+/* Dicas - Ajuda */
+
+.texto_dicas1 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 1000px;
+  left: 15%;
+  margin-top: 900px;
+  z-index: 3;
+}
+
+.seta_ajuda1 {
+  position: absolute;
+  width: 2%;
+  margin-top: 910px;
+  left: 12%;
+}
+
+.texto_dicas2 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 1000px;
+  left: 15%;
+  margin-top: 950px;
+  z-index: 3;
+}
+
+.seta_ajuda2 {
+  position: absolute;
+  width: 2%;
+  margin-top: 960px;
+  left: 12%;
+}
+
+.texto_dicas3 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 1000px;
+  left: 15%;
+  margin-top: 1000px;
+  z-index: 3;
+}
+
+.seta_ajuda3 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1010px;
+  left: 12%;
+}
+
+.texto_dicas4 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 1000px;
+  left: 15%;
+  margin-top: 1050px;
+  z-index: 3;
+}
+
+.seta_ajuda4 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1060px;
+  left: 12%;
+}
+
+
+.texto_dicas5 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  padding-right: 1000px;
+  left: 15%;
+  margin-top: 1100px;
+  z-index: 3;
+}
+
+.seta_ajuda5 {
+  position: absolute;
+  width: 2%;
+  margin-top: 1110px;
+  left: 12%;
+}
+
+/*------------------------------------------------------------------
+   	Configuração - Especialistas
+-------------------------------------------------------------------*/
+
+.background_especialistas {
+
+  margin-top: 1300px;
+  z-index: 3;
+  background-color: rgba(77, 76, 76, 0.2);
+  width: 100%;
+  padding: 500px;
+}
+
+/* Especialista - 1° */
+
+.titulo_especialistas {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-family: 'Sacramento';
+  left: 40%;
+  font-size: 6em;
+  margin-top: -940px;
+  z-index: 3;
+}
+
+.titulo_especialistas2 {
+
+  position: absolute;
+  text-decoration: none;
+  color: #f3755b;
+  font-family: 'Sacramento';
+  left: 40.2%;
+  font-size: 6em;
+  margin-top: -940px;
+  z-index: 3;
+}
+
+.dot {
+
+  height: 150px;
+  width: 150px;
+  background-color: #f3755b;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -780px;
+  left: 47%;
+  z-index: 3;
+}
+
+.nome_especialista {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  left: 42%;
+  margin-top: -570px;
+  z-index: 3;
+}
+
+.formacao_especialista {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  left: 47%;
+  margin-top: -530px;
+  z-index: 3;
+}
+
+.registro_especialista {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  left: 47.9%;
+  margin-top: -490px;
+  z-index: 3;
+}
+
+.depoimento_especialista {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  left: 25%;
+  right: 20%;
+  margin-top: -320px;
+  z-index: 3;
+}
+
+
+/*------------------------------------------------------------------
+   	Configuração - Footer
+-------------------------------------------------------------------*/
+
+.background_footer {
+
+  margin-top: 100px;
+  z-index: 3;
+  background-color: rgba(77, 76, 76, 0.4);
+  width: 100%;
+  padding: 100px;
+}
+
+.menu_footer1 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  left: 10.8%;
+  margin-top: -70px;
+  z-index: 3;
+}
+
+.menu_footer2 {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 17px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  left: 12%;
+  margin-top: -30px;
+  z-index: 3;
+}
+
+.menu_footer3 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 17px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  left: 12%;
+  margin-top: 10px;
+  z-index: 3;
+}
+
+.menu_footer4 {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 17px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  left: 12.3%;
+  margin-top: 50px;
+  z-index: 3;
+}
+
+.apoiadores {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 22px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  left: 30%;
+  margin-top: -170px;
+  z-index: 3;
+}
+
+.cvv {
+
+  position: absolute;
+  width: 7%;
+  margin-top: -130px;
+  left: 38%;
+}
+
+.prefeitura {
+
+  position: absolute;
+  width: 7%;
+  margin-top: -140px;
+  left: 46%;
+}
+
+.governo {
+
+  position: absolute;
+  width: 5%;
+  margin-top: -140px;
+  left: 55%;
+}
+
+.realizacao {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 12px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  left: 42%;
+  margin-top: -20px;
+  z-index: 3;
+}
+
+.topo {
+
+  position: absolute;
+  text-decoration: none;
+  color: rgba(77, 76, 76);
+  font-size: 18px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  left: 83%;
+  margin-top: -180px;
+  z-index: 3;
+}
+
+.scrollup{
+  position: absolute;
+	width:30px;
+	height:30px;
+	text-indent:-9999px;
+  left: 90%;
+  z-index: 999;
+  margin-top: -180px;
+}
+
+.scrollup:hover{
+	opacity:0.8;
+}
+
